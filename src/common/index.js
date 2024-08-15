@@ -1,5 +1,5 @@
 
-const backendDomain = "https://mern-backend-jade-eight.vercel.app/";
+const backendDomain = "https://mern-backend-puce.vercel.app/";
 
 
 const SummeryApi = {
