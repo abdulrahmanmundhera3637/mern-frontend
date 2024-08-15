@@ -13,7 +13,7 @@ const SummeryApi = {
         method : "post",
     },
     current_user : {
-        url: `${backendDomain}/api/user-details`, 
+        url : `${backendDomain}/api/user-details`, 
         method : "get",
     },
     logout_user : {
