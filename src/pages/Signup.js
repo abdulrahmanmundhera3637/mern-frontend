@@ -5,7 +5,7 @@ import imageTobase64 from "../helpers/imagetobase64.js";
 import SummeryApi from "../common/index.js";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+// signup page
 const Signup = () => {
   const [data, setData] = useState({
     email: "",
