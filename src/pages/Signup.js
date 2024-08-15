@@ -73,7 +73,7 @@ const Signup = () => {
           />
           <label
             htmlFor="fileUpload"
-            className="absolute bottom-0 right-0 bg-slate-200 text-xs cursor-pointer text-center w-24 h-10 flex items-center justify-center bg-opacity-80 rounded-br-full" {/* Adjusted sizes for mobile */}
+            className="absolute bottom-0 right-0 bg-slate-200 text-xs cursor-pointer text-center w-24 h-10 flex items-center justify-center bg-opacity-80 rounded-br-full"
           >
             Upload photo
             <input
