@@ -14,18 +14,22 @@ function App() {
   const dispatch = useDispatch()
   const [cartProductCount,setCartProductCount] = useState(0)
 
-  const fetchUserDetails = async()=>{
-      const dataResponse = await fetch(SummaryApi.current_user.url,{
-        method : SummaryApi.current_user.method,
-        credentials : 'include'
-      })
-
-      const dataApi = await dataResponse.json()
-
-      if(dataApi.success){
-        dispatch(setUserDetails(dataApi.data))
+  const fetchUserDetails = async () => {
+    try {
+      const response = await fetch(SummaryApi.current_user.url, {
+        method: SummaryApi.current_user.method,
+        credentials: 'include'
+      });
+      if (!response.ok) throw new Error('Network response was not ok.');
+      const dataApi = await response.json();
+      if (dataApi.success) {
+        dispatch(setUserDetails(dataApi.data));
       }
-  }
+    } catch (error) {
+      console.error('Fetch error:', error);
+    }
+  };
+  
 
   const fetchUserAddToCart = async()=>{
     const dataResponse = await fetch(SummaryApi.addToCartProductCount.url,{
