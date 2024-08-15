@@ -82,8 +82,7 @@ const ProductDetails = () => {
     await addToCart(e, id)
     fetchUserAddToCart()
     navigate('/cart')
-  }
-
+  };
   return (
     <div className='container mx-auto p-4'>
       <div className='min-h-[200px] flex flex-col lg:flex-row gap-4'>
@@ -135,7 +134,7 @@ const ProductDetails = () => {
         </div>
 
         {/* Product Details */}
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-1'>
           {loading ? (
             <div className='grid gap-1'>
               <p className='bg-slate-200 animate-pulse h-6 lg:h-8 w-full rounded-full inline-block'></p>
@@ -186,7 +185,7 @@ const ProductDetails = () => {
 
       {/* Recommended Products */}
       {data.category && (
-        <div className='my-6'>
+        <div className='my-4'> {/* Changed margin from my-6 to my-4 */}
           <CategroyWiseProductDisplay category={data?.category} heading={'Recommended Products'} />
         </div>
       )}
@@ -195,3 +194,4 @@ const ProductDetails = () => {
 }
 
 export default ProductDetails;
+
