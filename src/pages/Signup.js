@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import loginIcon from "../assest/signin.gif";
 import { Link, useNavigate } from "react-router-dom";
 import imageTobase64 from "../helpers/imagetobase64.js";
-import SummeryApi from "../common/index.js";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -41,8 +40,8 @@ const Signup = () => {
     e.preventDefault();
 
     if (data.password === data.confirmPassword) {
-      const dataResponse = await fetch(SummeryApi.signUp.url, {
-        method: SummeryApi.signUp.method,
+      const dataResponse = await fetch("https://mern-backend-puce.vercel.app/".signUp.url, {
+        method: "https://mern-backend-puce.vercel.app/".signUp.method,
         headers: {
           "content-type": "application/json",
         },
